@@ -8,7 +8,7 @@ module.exports = app => {
 
   app.on('issues.opened', async context => {
     const issueComment = context.issue({
-      body: 'Thanks for opening this issue!',
+      body: "Don't open an issue here, create a new LP task.",
     });
     return context.github.issues.createComment(issueComment);
   });
